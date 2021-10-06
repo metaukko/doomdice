@@ -10,6 +10,7 @@ h1
 	max-width: 60%;
 	margin: 0 auto;
 	text-align: center;
+	font-size:2.5em!important;
 }
 
 footer {
@@ -25,6 +26,7 @@ footer {
 .jumbotron
 {
 	text-align: center !important;
+	margin-bottom: 3rem !important;
 }
 
 .dice-wrapper
@@ -117,6 +119,6 @@ img
 	top: 0;
 	width: 38px;
 	height: 38px;
-	outline: 2px solid black;
+	outline: 4px solid black;
 }
 
