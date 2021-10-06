@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nopat perkele</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.html">Paska haisee</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="doomdice.html">DoomDice app</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="display-4">Select dice to roll</h1>
+
+<div class="jumbotron">
+
+	<div class="container">
+
+
+		<div class="row">
+		<div class="col">
+  		<input type="checkbox" id="redcheck" name="dicepicker">
+  		<label for="redcheck" id="red"></label>
+  		</div>
+
+  		<div class="col">
+  		<input type="checkbox" id="yellowcheck" name="dicepicker">
+  		<label for="yellowcheck" id="yellow"></label>
+  		</div>
+
+  		<div class="col">
+  		<input type="checkbox" id="bluecheck" name="dicepicker">
+  		<label for="bluecheck" id="blue"></label>
+  		</div>
+  		</div>
+  		
+  		<div class="row">
+		<div class="col">
+  		<input type="checkbox" id="bluecheck2" name="dicepicker">
+  		<label for="bluecheck2" id="blue"></label>
+  		</div>
+
+		<div class="col">
+  		<input type="checkbox" id="greencheck" name="dicepicker">
+  		<label for="greencheck" id="green"></label>
+  		</div>
+
+		<div class="col">
+  		<input type="checkbox" id="greencheck2" name="dicepicker">
+  		<label for="greencheck2" id="green"></label>
+  		</div>
+  		</div>
+
+
+	</div>
+
+	<div class="dice-wrapper">
+		
+			<img class="red" src="">
+		
+			<img class="yellow" src="">
+		
+			<img class="blue" src="">
+
+			<img class="blue2" src="">
+		
+			<img class="green" src="">
+		
+			<img class="green2" src="">
+		
+	</div>
+
+	<div class="actions">
+
+	<button type="button" class="dice-button btn btn-primary btn-outline-dark">Roll dice</button>
+	<button type="button" class="reset-button btn btn-warning btn-outline-dark">Reset dice</button>
+
+	</div>
+</div>
+
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright: Sono Ö</div>
+  <!-- Copyright -->
+
+</footer>
+	<script src="./js/index.js"></script>
+
+
+</body>
+</html>
