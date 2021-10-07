@@ -31,7 +31,7 @@ footer {
 
 .dice-wrapper
 {
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@ footer {
 
 }
 
-img
+.dice-wrapper img
 {
 	margin: 10px;
 	outline: 2px solid black;
@@ -61,6 +61,7 @@ img
 {
 	margin: 20px;
 }
+
 
 [type="checkbox"]
 {

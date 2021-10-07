@@ -6,6 +6,7 @@ function rollDice()
 {
 
 	resetDice();
+	
 
 	if (document.getElementById("redcheck").checked)
 	{
@@ -69,8 +70,8 @@ function rollRed()
 
 	var image = document.querySelectorAll(".red")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
-
+	$(".red").toggle("slow", function () {
+	});
 }
 
 function rollBlue()
@@ -80,7 +81,8 @@ function rollBlue()
 
 	var image = document.querySelectorAll(".blue")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
+	$(".blue").toggle("slow", function () {
+	});
 
 }
 
@@ -91,7 +93,8 @@ function rollBlueTwo()
 
 	var image = document.querySelectorAll(".blue2")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
+	$(".blue2").toggle("slow", function () {
+	});
 
 }
 
@@ -102,8 +105,8 @@ function rollYellow()
 
 	var image = document.querySelectorAll(".yellow")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
-
+	$(".yellow").toggle("slow", function () {
+	});
 }
 
 function rollGreen()
@@ -113,8 +116,8 @@ function rollGreen()
 
 	var image = document.querySelectorAll(".green")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
-
+	$(".green").toggle("slow", function () {
+	});
 }
 
 function rollGreenTwo()
@@ -124,8 +127,8 @@ function rollGreenTwo()
 
 	var image = document.querySelectorAll(".green2")[0];
 	image.setAttribute("src", imagePath);
-	image.style.display="inline-block";
-
+	$(".green2").toggle("slow", function () {
+	});
 }
 
 
