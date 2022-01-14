@@ -1,0 +1,125 @@
+body 
+{
+	max-width:1000px;
+	margin: auto !important;
+	background: gray;
+}
+
+h1 
+{
+	max-width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	font-size:2.5em!important;
+}
+
+footer {
+	text-align: center;
+	 position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+}
+
+
+.jumbotron
+{
+	text-align: center !important;
+	margin-bottom: 3rem !important;
+}
+
+.dice-wrapper
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.card-img-top
+{
+	display: block;
+	margin: 0;
+	outline: none;
+
+}
+
+.dice-wrapper img
+{
+	margin: 10px;
+	outline: 2px solid black;
+	display: none;
+}
+
+.container
+{
+	margin: 20px;
+	padding: 2em;
+	padding-bottom: 0.5em;
+}
+
+.dice-button
+{
+	margin: 20px;
+}
+
+
+[type="checkbox"]
+{
+	opacity: 0;
+}
+
+[type="checkbox"] + label
+{
+	padding-left: 56px;
+	position: relative;
+	display: inline-block;
+	line-height: 25px;
+	color: #666;
+	padding-bottom:3.8em;
+}
+
+
+[type="checkbox"] + label::before
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 38px;
+	height: 38px;
+	outline: : 2px solid #aaa;
+	background: white;
+}
+
+[type="checkbox"] + #red::before
+{
+	background: rgb(229,46,39);
+}
+
+[type="checkbox"] + #yellow::before
+{
+	background: rgb(233,205,82);
+}
+
+[type="checkbox"] + #blue::before
+{
+	background: #002080;
+}
+
+[type="checkbox"] + #green::before
+{
+	background: rgb(47,103,90);
+}
+
+
+[type="checkbox"]:checked + label::before
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 38px;
+	height: 38px;
+	outline: 4px solid black;
+}
+
