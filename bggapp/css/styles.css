@@ -22,104 +22,46 @@ footer {
   background-color: gray;
 }
 
-
 .jumbotron
 {
-	text-align: center !important;
 	margin-bottom: 3rem !important;
-}
-
-.dice-wrapper
-{
-	width: 60%;
-	margin: 0 auto;
-}
-
-.card-img-top
-{
-	display: block;
-	margin: 0;
-	outline: none;
-
-}
-
-.dice-wrapper img
-{
-	margin: 10px;
-	outline: 2px solid black;
-	display: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
 }
 
 .container
 {
+	background-color: #d3d9df;
 	margin: 20px;
-	padding: 2em;
-	padding-bottom: 0.5em;
+	padding: 1em 2em 1em 2em;
+
 }
 
-.dice-button
-{
-	margin: 20px;
+.card-title {
+	
+	margin: 0.8em;
+	font-size: 1rem;
 }
 
+.card-body {
 
-[type="checkbox"]
-{
-	opacity: 0;
+	padding: 0.8rem !important;
+	
 }
 
-[type="checkbox"] + label
-{
-	padding-left: 56px;
-	position: relative;
-	display: inline-block;
-	line-height: 25px;
-	color: #666;
-	padding-bottom:3.8em;
+.content-wrapper {
+	margin: auto;
+    text-align: center;
+	height: 180px;
 }
 
+.btn {
 
-[type="checkbox"] + label::before
-{
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 38px;
-	height: 38px;
-	outline: : 2px solid #aaa;
-	background: white;
-}
-
-[type="checkbox"] + #red::before
-{
-	background: rgb(229,46,39);
-}
-
-[type="checkbox"] + #yellow::before
-{
-	background: rgb(233,205,82);
-}
-
-[type="checkbox"] + #blue::before
-{
-	background: #002080;
-}
-
-[type="checkbox"] + #green::before
-{
-	background: rgb(47,103,90);
+	margin: 8px;
 }
 
 
-[type="checkbox"]:checked + label::before
-{
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 38px;
-	height: 38px;
-	outline: 4px solid black;
-}
+
+
 

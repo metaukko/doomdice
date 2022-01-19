@@ -4,7 +4,7 @@
 	<title>TESTIII</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./bggapp/css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="../index.html">Index</a>
+  <a class="navbar-brand" href="index.html">Index</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,44 +26,48 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="../doomdice.html">DoomDice app</a>
+        <a class="nav-link" href="doomdice.html">DoomDice app</a>
       </li>
 	   <li class="nav-item">
-        <a class="nav-link" href="bggtools.php">BGG Tools</a>
+        <a class="nav-link" href="bggtools.html">BGG Tools</a>
       </li>
     </ul>
   </div>
 </nav>
 
 
-<h1 class="display-4">BGG boardgame tools</h1>
+<h1 class="display-4">BGG boardgame stuff</h1>
 
 <div class="jumbotron">
 
 	<div class="container">
-		<p>View your own  boardgame collection</p>
+		<p>View your personal boardgame collection</p>
 
-		<form action="usercollection.php" method="get">
-			BGG username: <input type="text" name="name"><br>
-			<input type="submit">
+		<form action="./bggapp/usercollection.php" method="get">
+		<div class="form-group>">
+			<label for="text"><b>BGG username:</b></label> 
+			<input type="text" class="form-control" name="name" placeholder="Enter username"><br>
+			</div>
+			<button type="submit" class="btn btn-primary">GO!</button>
+		
 		</form>
 	
 	</div>
 	
 	<div class="container">
-		<p>Find a new game from the TOP 100 boardgames list</p>
+		<p>Find a new game from the <b>TOP 100</b> boardgames list</p>
 		
-		<form action="gameselector.php" method="get">
-			BGG username: <input type="text" name="name"><br>
-			<input type="submit">
+		<form action="./bggapp/gameselector.php" method="get">
+		<div class="form-group>">
+			<label for="text"><b>BGG username:</b></label> 
+			<input type="text" name="name"  class="form-control" placeholder="Enter username"><br>
+			</div>
+			<button type="submit" class="btn btn-primary">GO!</button>
 		</form>
 	
 	</div>
 	
 </div>	
-
-
-
 
 <footer class="page-footer font-small special-color-dark pt-4">
 

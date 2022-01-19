@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
 require_once("./scripts/RequestHandler.php");
+require_once ("./scripts/Utils.php");
+$username = $_GET["name"];
+$requestHandler = new RequestHandler();
+$array = $requestHandler->getUserCollection($username);
+$baseUrl = 'https://www.boardgamegeek.com';
 ?>
 <html>
 <head>
@@ -16,52 +21,54 @@ require_once("./scripts/RequestHandler.php");
 </head>
 <body>
 
+
+<h1 class="display-4">Your new game awaits</h1>
+	
+	<form>
+		<input type="button" value="Go back!" onclick="history.back()">
+	</form>
+	
+<div class="jumbotron">
+
+
 <?php
-
-$username = $_GET["name"];
-
-$requestHandler = new RequestHandler();
-
-$array = $requestHandler->getUserCollection($username);
-
- 
 if (!empty($array['item'])) {
  
-$items = $array['item'];
-$nameArr = [];
+	$items = $array['item'];
+	$nameArr = [];
 
-foreach ($items as $item){
+	foreach ($items as $item){
 	
-	$nameArr[] = $item['name'];
-}
-
-$topGameNames = $requestHandler->getTopGames();
-
-$selectedNameList = [];
-
-foreach ($topGameNames as $text) {
-	$content = $text;
-	
-	if (!in_array($content, $nameArr)){
-	$selectedNameList[] = $text;
+		$nameArr[] = $item['name'];
 	}
-	
-}
 
-$random_key = array_rand($selectedNameList, 1);
+	$topGameNames = $requestHandler->getTopGames();
 
-echo "<h3>here's your new boardgame from the TOP 100 list</h3>";
+	$utils = new Utils();
 
-echo $selectedNameList[$random_key];
-
+	$randomGame = $utils->getRandomGame($topGameNames, $nameArr);
 
 } else {
-	
 	echo 'Username not found or API request failed. Try again!';
-	
 }
-	
 ?>
+	<div class="content-wrapper">
+		<h3>Check out your new boardgame from the TOP 100 list</h3>
+			<button data-toggle="collapse" class="btn btn-primary" data-target="#demo">Reveal</button>
+			<div id="demo" class="collapse">
+			<?= "*<a href='" . $baseUrl . $randomGame['url'] . "'>" . $randomGame['name'] . "</a>*";?>
+			</div>
+	</div>
+	
+</div>
+	
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Sono Ö</div>
+  <!-- Copyright -->
+
+</footer>
 
 </body>
 </html>

@@ -7,11 +7,16 @@ class RequestHandler {
 	const TOP_GAMES_URL = 'https://boardgamegeek.com/browse/boardgame';
 	
 	
-	function getUserCollection($name): array
+	function getUserCollection($name)
 	{
 		$username = $_GET["name"];
-
+		
+		libxml_use_internal_errors(true);
+	
 		$simpleXmlObject = simplexml_load_file(self::BASE_URL . '/collection?username=' . $username . '&subtype=boardgame&own=1');
+		if (false === $simpleXmlObject) {
+			return null;
+		}
 
 		$array = json_decode(json_encode($simpleXmlObject), true);
 		
@@ -39,7 +44,7 @@ class RequestHandler {
 		
 		foreach ($topGames as $text) {
 			
-			$topGameNames[] = $text->textContent;
+			$topGameNames[$text->textContent] = $text->getAttribute('href');
 		}
 		
 		return $topGameNames;
